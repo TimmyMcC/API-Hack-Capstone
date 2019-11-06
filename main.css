@@ -1,3 +1,490 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+  
+html {
+    height: 100%;
+}
+  
+.header {
+    font-family: 'Bree Serif', serif;
+    font-weight: bold;
+    font-style: italic;
+    color: #254BB3;
+}
+  
+.appDescription, .brewerySearch, .brewStuffs, .toTop {
+    font-family: 'Hind Vadodara', sans-serif;
+  }
+
 .hidden {
-  display: none;
+    display: none;
+}
+  
+a:link {
+    color: #254BB3;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #D60103;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #EDA800;
+}
+  
+select {
+    height: 25px;
+    background-color: white;
+    font-size: 14px;
+}
+
+input {
+    font-size: 14px;
+}
+  
+.formButton {
+    margin-top: 20px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+  
+.maxResults, .citySearch {
+    padding-left: 5px;
+}
+  
+.brewerySearch {
+    width: 180px;
+    padding: 20px;
+    margin: 0 auto;
+}
+  
+input, select {
+    width: 140px;
+    padding: 2px;
+    margin: 0 auto;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+
+#map {
+    height: 100%;
+}
+  
+@media screen and (min-width: 320px) {
+
+    body {
+        background-image: url('https://www.thespruceeats.com/thmb/yvvxdsQW2P3qnUhLDw9IQ2ZIGgc=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/beer-head-58a6ca713df78c345b430786.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 100%;
+    }
+
+    .header {
+        width: 100%;
+        height: 58px;
+        font-size: 38px;
+        text-align: center;
+        margin-top: 20px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    h3 {
+        color: #254BB3;
+        text-align: center;
+    }
+
+    .appDescription {
+        width: 250px;
+        font-size: 18px;
+        margin-top: 15px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .brewBox {
+        background-color: rgb(255, 255, 255, .5);
+        padding: 8px 16px 8px 14px;
+        width: 280px;
+        border: 1px solid #1F5AFF;
+        border-radius: 5px;
+        margin: 0 auto 10px;
+    }
+
+    .siteName {
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    p {
+        line-height: 1.5;
+    }
+  
+    .mapImage {
+        height: 250px;
+        width: 250px;
+        border: 1px solid #1F5AFF;
+        border-radius: 5px;
+        margin: 0 auto;
+    }
+
+    .mapBox {
+        margin-top: 10px;
+    }
+
+    .toTop {
+        font-size: 17px;
+        text-align: center;
+        margin: 10px auto;
+    }
+}
+
+@media screen and (min-width: 420px) {
+
+    body {
+        background-image: url('https://www.thespruceeats.com/thmb/yvvxdsQW2P3qnUhLDw9IQ2ZIGgc=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/beer-head-58a6ca713df78c345b430786.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 100%;
+    }
+
+    .header {
+        width: 100%;
+        height: 58px;
+        font-size: 44px;
+        text-align: center;
+        margin-top: 20px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    h3 {
+        color: #254BB3;
+        text-align: center;
+    }
+
+    .appDescription {
+        width: 300px;
+        font-size: 21px;
+        margin-top: 30px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .brewBox {
+        background-color: rgb(255, 255, 255, .5);
+        padding: 8px 16px 8px 14px;
+        width: 280px;
+        border: 1px solid #1F5AFF;
+        border-radius: 5px;
+        margin: 0 auto 10px;
+    }
+
+    .siteName {
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    p {
+        line-height: 1.5;
+    }
+  
+    .mapImage {
+        height: 250px;
+        width: 250px;
+        border: 1px solid #1F5AFF;
+        border-radius: 5px;
+        margin: 0 auto;
+    }
+
+    .mapBox {
+        margin-top: 10px;
+    }
+
+    .toTop {
+        font-size: 17px;
+        text-align: center;
+        margin: 10px auto;
+    }
+}
+
+@media screen and (min-width: 550px) {
+
+    body {
+        background-image: url('https://www.thespruceeats.com/thmb/yvvxdsQW2P3qnUhLDw9IQ2ZIGgc=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/beer-head-58a6ca713df78c345b430786.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 100%;
+    }
+
+    .header {
+        width: 100%;
+        height: 58px;
+        font-size: 52px;
+        text-align: center;
+        margin-top: 20px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    h3 {
+        color: #254BB3;
+        text-align: center;
+    }
+
+    .appDescription {
+        width: 300px;
+        font-size: 24px;
+        margin-top: 35px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }   
+
+    .brewStuffs {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .brewBox {
+        background-color: rgb(255, 255, 255, .5);
+        padding: 8px 16px 8px 14px;
+        width: 340px;
+        border: 1px solid #1F5AFF;
+        border-radius: 5px;
+        margin: 0 5px 10px;
+    }
+
+    .siteName {
+        margin-bottom: 5px;
+        font-weight: bold;
+        font-size: 21px;
+    }
+
+    p {
+        line-height: 1.5;
+        font-size: 17px;
+    }
+  
+    .mapImage {
+        height: 310px;
+        width: 310px;
+        border: 1px solid #1F5AFF;
+        border-radius: 5px;
+        margin: 0 auto;
+    }
+
+    .mapBox {
+        margin-top: 10px;
+    }
+
+    .toTop {
+        font-size: 20px;
+        text-align: center;
+        margin: 10px auto;
+    }
+}
+
+@media screen and (min-width: 870px) {
+
+    body {
+        background-image: url('https://www.thespruceeats.com/thmb/yvvxdsQW2P3qnUhLDw9IQ2ZIGgc=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/beer-head-58a6ca713df78c345b430786.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 100%;
+    }
+
+    .header {
+        height: 66px;
+        width: 400px;
+        font-size: 60px;
+        text-align: left;
+        margin-top: 66px;
+    }
+
+    h3 {
+        color: #254BB3;
+    }
+
+    .appDescription {
+        width: 400px;
+        font-size: 30px;
+        text-align: left;
+        margin-top: 40px;
+    }
+
+    .headerFormBox {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .brewerySearch {
+        margin-top: 25px;
+    } 
+
+    .brewStuffs {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .brewBox {
+        background-color: rgb(255, 255, 255, .5);
+        padding: 8px 16px 8px 14px;
+        width: 400px;
+        border: 1px solid #1F5AFF;
+        border-radius: 5px;
+        margin: 0 5px 25px;
+    }
+
+    .siteName {
+        margin-bottom: 5px;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    p {
+        line-height: 1.5;
+        font-size: 20px;;
+    }
+  
+    .mapImage {
+        height: 370px;
+        width: 370px;
+        border: 1px solid #1F5AFF;
+        border-radius: 5px;
+        margin: 0 auto;
+    }
+
+    .mapBox {
+        margin-top: 10px;
+    }
+
+    .toTop {
+        font-size: 22px;
+        text-align: center;
+        margin: 10px auto;
+    }
+}
+
+@media screen and (min-width: 1230px) {
+
+    body {
+        background-image: url('https://www.thespruceeats.com/thmb/yvvxdsQW2P3qnUhLDw9IQ2ZIGgc=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/beer-head-58a6ca713df78c345b430786.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 100%;
+    }
+
+    .brewImage {
+        background-image: url('https://st2.depositphotos.com/1692343/6719/i/950/depositphotos_67196203-stock-photo-assorted-beers-in-a-flight.jpg');
+        height: 255px;
+        width: 200px;
+        border: 1px solid #1F5AFF;
+        border-radius: 25%;
+        background-size: 325px 260px;
+        background-position: center;
+        margin-top: 50px;
+    }
+
+    .header {
+        height: 66px;
+        width: 400px;
+        font-size: 60px;
+        text-align: left;
+        margin-top: 66px;
+    }
+
+    h3 {
+        color: #254BB3;
+    }
+
+    .appDescription {
+        width: 400px;
+        font-size: 30px;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .headerFormBox {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .brewerySearch {
+        margin-top: 25px;
+    }
+
+    .brewStuffs {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .brewBox {
+        background-color: rgb(255, 255, 255, .5);
+        padding: 8px 16px 8px 14px;
+        width: 400px;
+        border: 1px solid #1F5AFF;
+        border-radius: 5px;
+        margin: 0 5px 25px;
+    }
+
+    .siteName {
+        margin-bottom: 5px;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    p {
+        line-height: 1.5;
+        font-size: 20px;;
+    }
+  
+    .mapImage {
+        height: 370px;
+        width: 370px;
+        border: 1px solid #1F5AFF;
+        border-radius: 5px;
+        margin: 0 auto;
+    }
+
+    .mapBox {
+        margin-top: 10px;
+    }
+
+    .toTop {
+        font-size: 22px;
+        text-align: center;
+        margin: 10px auto;
+    }
 }
