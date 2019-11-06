@@ -1,6 +1,6 @@
 # BREW'S CLUES
 
-Live app can be found [here](http://example.com/).
+Live app can be found [here](https://timmymcc.github.io/Brews-Clues-Brewery-Search/).
 
 
 ## Motivation
