@@ -35,4 +35,4 @@ The user can conduct a search using one required and two optional criteria. They
 
 ## Notes
 
-I originally wanted to include what the database called "tag lists" (dog-friendly, patio, food, tours, etc.) as one of the optional search criteria, but an overwhelming majority of the tag lists were completely empty. It's worth noting that the database is still being updated, so perhaps in the future I will be able to update my work to include this additional information.
+I originally wanted to include what the database called "tag lists" (dog-friendly, patio, food, tours, etc.) as one of the optional search criteria, but an overwhelming majority of the tag lists were completely empty. It's worth noting that the database is still being updated, so perhaps in the future I will be able to re-examine my work and update it to include this additional information.
