@@ -16,8 +16,8 @@ The user can conduct a search using one required and two optional criteria. They
 ## Screenshots
 
 ### Mobile
-![Brew's Clues Start View](/Images/Brews_Clues_Start_Mobile.jpg width="320px" height="658px") 
-![Brew's Clues Search Results](/Images/Brews_Clues_Search_Mobile.jpg width="320px" height="658px")
+<img src="Images/Brews_Clues_Start_Mobile.jpg" width="320" height="658">
+<img src="Images/Brews_Clues_Search_Mobile.jpg" width="320" height="658">
 
 
 ### Desktop
