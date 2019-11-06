@@ -16,16 +16,13 @@ The user can search for breweries using one required and two optional criteria. 
 ## Screenshots
 
 ### Mobile
-![alt text](/path/to/img.jpg "Title")
-![alt text](/path/to/img.jpg "Title")
+![Start View](/Images/Brews_Clues_Start_Mobile.jpg "Title")
+![Search Results](/Images/Brews_Clues_Search_Mobile.jpg "Title")
 
-### Tablet
-![alt text](/path/to/img.jpg "Title")
-![alt text](/path/to/img.jpg "Title")
 
 ### Desktop
-![alt text](/path/to/img.jpg "Title")
-![alt text](/path/to/img.jpg "Title")
+![Start View](/Images/Brews_Clues_Start_Desktop.png "Brew's Clues")
+![Search Results](/Images/Brews_Clues_Search_Desktop.png "Brew's Clues")
 
 
 ## Technology Used
