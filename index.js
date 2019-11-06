@@ -57,15 +57,15 @@ function displayResults(responseJson) {
     let phone = responseJson[i].phone;
     let formattedPhone = phone.substr(0, 3) + '-' + phone.substr(3, 3) + '-' + phone.substr(6,4);
     $('#js-brew-info-list').append(
-      `<li class="brewBox">
-      <h3><a href="${responseJson[i].website_url}" target="_blank" class="siteName">${responseJson[i].name}</a></h3>
-      <p>Brewery Type: ${type}</p>
-      <p>${responseJson[i].street}</p>
-      <p>${responseJson[i].city}, ${responseJson[i].state} ${responseJson[i].postal_code}</p>
-      <p>Call: <a href="tel:${formattedPhone}" class="phone">${formattedPhone}</a></p>
-      <div id="map" class="mapBox">
-        <a href="https://www.google.com/maps/place/${address}" target="_blank"><img class="mapImage" src="https://maps.googleapis.com/maps/api/staticmap?center=${address}&zoom=15&size=400x400&maptype=roadmap&markers=size:mid%7Ccolor:red%7C${address}&key=AIzaSyAYGHKk4ShuVV2kSW1qdriV73JdxAaxCzg"></a>
-      </div>
+        `<li class="brewBox">
+        <h3 class="siteName"><a href="${responseJson[i].website_url}" target="_blank">${responseJson[i].name}</a></h3>
+        <p>Brewery Type: ${type}</p>
+        <p>${responseJson[i].street}</p>
+        <p>${responseJson[i].city}, ${responseJson[i].state} ${responseJson[i].postal_code}</p>
+        <p>Call: <a href="tel:${formattedPhone}" class="phone">${formattedPhone}</a></p>
+        <div id="map" class="mapBox">
+            <a href="https://www.google.com/maps/place/${address}" target="_blank"><img class="mapImage" src="https://maps.googleapis.com/maps/api/staticmap?center=${address}&zoom=15&size=400x400&maptype=roadmap&markers=size:mid%7Ccolor:red%7C${address}&key=AIzaSyAYGHKk4ShuVV2kSW1qdriV73JdxAaxCzg"></a>
+        </div>
       </li>`
     );
   };
