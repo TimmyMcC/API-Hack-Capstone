@@ -306,14 +306,14 @@ p {
         height: 66px;
         width: 450px;
         font-size: 60px;
-        text-align: left;
+        text-align: center;
         margin-top: 66px;
     }
 
     .appDescription {
         width: 400px;
         font-size: 30px;
-        text-align: left;
+        text-align: center;
         margin-top: 40px;
     }
 
