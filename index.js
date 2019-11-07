@@ -58,7 +58,6 @@ function displayResults(responseJson) {
     let address = street + ',' + city + ',' + state;
     // Removes +4 from zip code to save on space once rendered
     let zip = responseJson[i].postal_code.substr(0, 5);
-    let mapName = responseJson[i].name.split(/ /).join('+');
     // Changes phone number into a normal format
     let phone = responseJson[i].phone;
     let formattedPhone = phone.substr(0, 3) + '-' + phone.substr(3, 3) + '-' + phone.substr(6,4);
