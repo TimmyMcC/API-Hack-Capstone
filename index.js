@@ -4,6 +4,7 @@ const baseURL = 'https://api.openbrewerydb.org/breweries';
 
 function queryParamsToString(params) {
   const queryItems = Object.keys(params)
+    // Filters out unused optional search criteria so the url will be functional
     .map(key => {
       if (params[key] == null || params[key] === '') {
         return;
@@ -48,12 +49,17 @@ function displayResults(responseJson) {
   $('#js-clear-form').removeClass('hidden');
 
   for (let i = 0; i < responseJson.length; i++){
+    // Capitalizes first letter of brewery type
     let type = responseJson[i].brewery_type.charAt(0).toUpperCase() + responseJson[i].brewery_type.slice(1);
+    // Modifies the address components so they can be used in the Google Maps link
     let street = responseJson[i].street.split(/ /).join('+');
     let city = responseJson[i].city.split(/ /).join('+');
     let state = responseJson[i].state.split(/ /).join('+');
     let address = street + ',' + city + ',' + state;
+    // Removes +4 from zip code to save on space once rendered
+    let zip = responseJson[i].postal_code.substr(0, 5);
     let mapName = responseJson[i].name.split(/ /).join('+');
+    // Changes phone number into a normal format
     let phone = responseJson[i].phone;
     let formattedPhone = phone.substr(0, 3) + '-' + phone.substr(3, 3) + '-' + phone.substr(6,4);
     $('#js-brew-info-list').append(
@@ -61,7 +67,7 @@ function displayResults(responseJson) {
         <h3 class="siteName"><a href="${responseJson[i].website_url}" target="_blank">${responseJson[i].name}</a></h3>
         <p>Brewery Type: ${type}</p>
         <p>${responseJson[i].street}</p>
-        <p>${responseJson[i].city}, ${responseJson[i].state} ${responseJson[i].postal_code}</p>
+        <p>${responseJson[i].city}, ${responseJson[i].state} ${zip}</p>
         <p>Call: <a href="tel:${formattedPhone}" class="phone">${formattedPhone}</a></p>
         <div id="map" class="mapBox">
             <a href="https://www.google.com/maps/place/${address}" target="_blank"><img class="mapImage" src="https://maps.googleapis.com/maps/api/staticmap?center=${address}&zoom=15&size=400x400&maptype=roadmap&markers=size:mid%7Ccolor:red%7C${address}&key=AIzaSyAYGHKk4ShuVV2kSW1qdriV73JdxAaxCzg"></a>
@@ -73,6 +79,15 @@ function displayResults(responseJson) {
   $('#js-brew-info-box').removeClass('hidden');
 }
 
+function clearForm() {
+  $('#js-clear-form').on('click', function() {
+    event.preventDefault();
+    document.getElementById("js-brewery-search").reset();
+    $('#js-brew-info-box').addClass('hidden');
+    $('#js-clear-form').addClass('hidden');
+  })
+}
+
 function watchForm() {
   $('#js-brewery-search').on('submit', function() {
     event.preventDefault();
@@ -82,15 +97,6 @@ function watchForm() {
     const maxResults = $('#js-max-results').val();
     getBreweryInfo(brewCity, brewState, brewType, maxResults);
     clearForm();
-  })
-}
-
-function clearForm() {
-  $('#js-clear-form').on('click', function() {
-    event.preventDefault();
-    document.getElementById("js-brewery-search").reset();
-    $('#js-brew-info-box').addClass('hidden');
-    $('#js-clear-form').addClass('hidden');
   })
 }
 
