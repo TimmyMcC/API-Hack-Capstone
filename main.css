@@ -84,7 +84,7 @@ input, select {
 @media screen and (min-width: 320px) {
 
     body {
-        background-image: 'Images/beerBackground.jpg';
+        background-image: 'images/beerBackground.jpg';
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -156,7 +156,7 @@ input, select {
 @media screen and (min-width: 420px) {
 
     body {
-        background-image: 'Images/beerBackground.jpg';
+        background-image: 'images/beerBackground.jpg';
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -228,7 +228,7 @@ input, select {
 @media screen and (min-width: 550px) {
 
     body {
-        background-image: 'Images/beerBackground.jpg';
+        background-image: 'images/beerBackground.jpg';
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -309,7 +309,7 @@ input, select {
 @media screen and (min-width: 870px) {
 
     body {
-        background-image: 'Images/beerBackground.jpg';
+        background-image: 'images/beerBackground.jpg';
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -395,7 +395,7 @@ input, select {
 @media screen and (min-width: 1230px) {
 
     body {
-        background-image: 'Images/beerBackground.jpg';
+        background-image: 'images/beerBackground.jpg';
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -403,7 +403,7 @@ input, select {
     }
 
     .brewImage {
-        background-image: 'Images/beerFlight.jpg';
+        background-image: 'images/beerFlight.jpg';
         height: 255px;
         width: 200px;
         border: 1px solid #1F5AFF;
