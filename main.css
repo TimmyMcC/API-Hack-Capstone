@@ -14,6 +14,10 @@ html {
     font-style: italic;
     color: #254BB3;
 }
+
+h3 {
+    color: #254BB3;
+}
   
 .appDescription, .brewerySearch, .brewStuffs, .toTop {
     font-family: 'Hind Vadodara', sans-serif;
@@ -40,6 +44,12 @@ a:hover, a:focus {
 
 a:active {
     color: #EDA800;
+}
+
+fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
 }
   
 select {
@@ -77,14 +87,45 @@ input, select {
     margin-bottom: 5px;
 }
 
+.brewBox {
+    background-color: rgb(255, 255, 255, .5);
+    padding: 8px 16px 8px 14px;
+    border: 1px solid #1F5AFF;
+    border-radius: 5px;
+}
+
+.siteName {
+    margin-bottom: 1px;
+    font-weight: bold;
+}
+
+p {
+    line-height: 1.5;
+}
+
 #map {
     height: 100%;
+}
+
+.mapBox {
+    margin-top: 10px;
+}
+
+.mapImage {
+    border: 1px solid #1F5AFF;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.toTop {
+    text-align: center;
+    margin: 10px auto;
 }
   
 @media screen and (min-width: 320px) {
 
     body {
-        background-image: url(Images/beerBackground.jpg);
+        background-image: url('https://www.thespruceeats.com/thmb/yvvxdsQW2P3qnUhLDw9IQ2ZIGgc=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/beer-head-58a6ca713df78c345b430786.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -103,7 +144,6 @@ input, select {
     }
 
     h3 {
-        color: #254BB3;
         text-align: center;
     }
 
@@ -117,46 +157,28 @@ input, select {
     }
 
     .brewBox {
-        background-color: rgb(255, 255, 255, .5);
-        padding: 8px 16px 8px 14px;
         width: 280px;
-        border: 1px solid #1F5AFF;
-        border-radius: 5px;
-        margin: 0 auto 10px;
-    }
-
-    .siteName {
-        margin-bottom: 2px;
-        font-weight: bold;
+        margin: 0 auto 25px;
     }
 
     p {
-        line-height: 1.5;
+        font-size: 14px;
     }
   
     .mapImage {
         height: 250px;
         width: 250px;
-        border: 1px solid #1F5AFF;
-        border-radius: 5px;
-        margin: 0 auto;
-    }
-
-    .mapBox {
-        margin-top: 10px;
     }
 
     .toTop {
         font-size: 17px;
-        text-align: center;
-        margin: 10px auto;
     }
 }
 
 @media screen and (min-width: 420px) {
 
     body {
-        background-image: url(Images/beerBackground.jpg);
+        background-image: url('https://www.thespruceeats.com/thmb/yvvxdsQW2P3qnUhLDw9IQ2ZIGgc=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/beer-head-58a6ca713df78c345b430786.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -175,7 +197,6 @@ input, select {
     }
 
     h3 {
-        color: #254BB3;
         text-align: center;
     }
 
@@ -189,46 +210,28 @@ input, select {
     }
 
     .brewBox {
-        background-color: rgb(255, 255, 255, .5);
-        padding: 8px 16px 8px 14px;
         width: 280px;
-        border: 1px solid #1F5AFF;
-        border-radius: 5px;
-        margin: 0 auto 10px;
-    }
-
-    .siteName {
-        margin-bottom: 2px;
-        font-weight: bold;
+        margin: 0 auto 25px;
     }
 
     p {
-        line-height: 1.5;
+        font-size: 14px;
     }
   
     .mapImage {
         height: 250px;
         width: 250px;
-        border: 1px solid #1F5AFF;
-        border-radius: 5px;
-        margin: 0 auto;
-    }
-
-    .mapBox {
-        margin-top: 10px;
     }
 
     .toTop {
         font-size: 17px;
-        text-align: center;
-        margin: 10px auto;
     }
 }
 
 @media screen and (min-width: 550px) {
 
     body {
-        background-image: url(Images/beerBackground.jpg);
+        background-image: url('https://www.thespruceeats.com/thmb/yvvxdsQW2P3qnUhLDw9IQ2ZIGgc=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/beer-head-58a6ca713df78c345b430786.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -247,7 +250,6 @@ input, select {
     }
 
     h3 {
-        color: #254BB3;
         text-align: center;
     }
 
@@ -268,48 +270,32 @@ input, select {
     }
 
     .brewBox {
-        background-color: rgb(255, 255, 255, .5);
-        padding: 8px 16px 8px 14px;
         width: 340px;
-        border: 1px solid #1F5AFF;
-        border-radius: 5px;
-        margin: 0 5px 10px;
+        margin: 0 10px 25px;
     }
 
     .siteName {
-        margin-bottom: 2px;
-        font-weight: bold;
         font-size: 21px;
     }
 
     p {
-        line-height: 1.5;
         font-size: 17px;
     }
   
     .mapImage {
         height: 310px;
         width: 310px;
-        border: 1px solid #1F5AFF;
-        border-radius: 5px;
-        margin: 0 auto;
-    }
-
-    .mapBox {
-        margin-top: 10px;
     }
 
     .toTop {
         font-size: 20px;
-        text-align: center;
-        margin: 10px auto;
     }
 }
 
 @media screen and (min-width: 870px) {
 
     body {
-        background-image: url(Images/beerBackground.jpg);
+        background-image: url('https://www.thespruceeats.com/thmb/yvvxdsQW2P3qnUhLDw9IQ2ZIGgc=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/beer-head-58a6ca713df78c345b430786.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -318,14 +304,10 @@ input, select {
 
     .header {
         height: 66px;
-        width: 400px;
+        width: 450px;
         font-size: 60px;
         text-align: left;
         margin-top: 66px;
-    }
-
-    h3 {
-        color: #254BB3;
     }
 
     .appDescription {
@@ -353,49 +335,33 @@ input, select {
     }
 
     .brewBox {
-        background-color: rgb(255, 255, 255, .5);
-        padding: 8px 16px 8px 14px;
         width: 400px;
-        border: 1px solid #1F5AFF;
-        border-radius: 5px;
         margin: 0 5px 25px;
     }
 
     .siteName {
-        margin-bottom: 2px;
         font-size: 24px;
-        font-weight: bold;
         text-align: center;
     }
 
     p {
-        line-height: 1.5;
-        font-size: 20px;;
+        font-size: 20px;
     }
   
     .mapImage {
         height: 370px;
         width: 370px;
-        border: 1px solid #1F5AFF;
-        border-radius: 5px;
-        margin: 0 auto;
-    }
-
-    .mapBox {
-        margin-top: 10px;
     }
 
     .toTop {
         font-size: 22px;
-        text-align: center;
-        margin: 10px auto;
     }
 }
 
 @media screen and (min-width: 1230px) {
 
     body {
-        background-image: url(Images/beerBackground.jpg);
+        background-image: url('https://www.thespruceeats.com/thmb/yvvxdsQW2P3qnUhLDw9IQ2ZIGgc=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/beer-head-58a6ca713df78c345b430786.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -403,7 +369,7 @@ input, select {
     }
 
     .brewImage {
-        background-image: url(Images/beerFlight.jpg);
+        background-image: url('https://st2.depositphotos.com/1692343/6719/i/950/depositphotos_67196203-stock-photo-assorted-beers-in-a-flight.jpg');
         height: 255px;
         width: 200px;
         border: 1px solid #1F5AFF;
@@ -415,14 +381,10 @@ input, select {
 
     .header {
         height: 66px;
-        width: 500px;
+        width: 450px;
         font-size: 60px;
         text-align: center;
         margin-top: 66px;
-    }
-
-    h3 {
-        color: #254BB3;
     }
 
     .appDescription {
@@ -450,41 +412,25 @@ input, select {
     }
 
     .brewBox {
-        background-color: rgb(255, 255, 255, .5);
-        padding: 8px 16px 8px 14px;
         width: 400px;
-        border: 1px solid #1F5AFF;
-        border-radius: 5px;
         margin: 0 5px 25px;
     }
 
     .siteName {
-        margin-bottom: 2px;
         font-size: 24px;
-        font-weight: bold;
         text-align: center;
     }
 
     p {
-        line-height: 1.5;
-        font-size: 20px;;
+        font-size: 20px;
     }
   
     .mapImage {
         height: 370px;
         width: 370px;
-        border: 1px solid #1F5AFF;
-        border-radius: 5px;
-        margin: 0 auto;
-    }
-
-    .mapBox {
-        margin-top: 10px;
     }
 
     .toTop {
         font-size: 22px;
-        text-align: center;
-        margin: 10px auto;
     }
 }
