@@ -84,7 +84,7 @@ input, select {
 @media screen and (min-width: 320px) {
 
     body {
-        background-image: url('https://www.thespruceeats.com/thmb/yvvxdsQW2P3qnUhLDw9IQ2ZIGgc=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/beer-head-58a6ca713df78c345b430786.jpg');
+        background-image: 'images/beerBackground.jpg';
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -156,7 +156,7 @@ input, select {
 @media screen and (min-width: 420px) {
 
     body {
-        background-image: url('https://www.thespruceeats.com/thmb/yvvxdsQW2P3qnUhLDw9IQ2ZIGgc=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/beer-head-58a6ca713df78c345b430786.jpg');
+        background-image: 'images/beerBackground.jpg';
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -228,7 +228,7 @@ input, select {
 @media screen and (min-width: 550px) {
 
     body {
-        background-image: url('https://www.thespruceeats.com/thmb/yvvxdsQW2P3qnUhLDw9IQ2ZIGgc=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/beer-head-58a6ca713df78c345b430786.jpg');
+        background-image: 'images/beerBackground.jpg';
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -309,7 +309,7 @@ input, select {
 @media screen and (min-width: 870px) {
 
     body {
-        background-image: url('https://www.thespruceeats.com/thmb/yvvxdsQW2P3qnUhLDw9IQ2ZIGgc=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/beer-head-58a6ca713df78c345b430786.jpg');
+        background-image: 'images/beerBackground.jpg';
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -395,7 +395,7 @@ input, select {
 @media screen and (min-width: 1230px) {
 
     body {
-        background-image: url('https://www.thespruceeats.com/thmb/yvvxdsQW2P3qnUhLDw9IQ2ZIGgc=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/beer-head-58a6ca713df78c345b430786.jpg');
+        background-image: 'images/beerBackground.jpg';
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -403,7 +403,7 @@ input, select {
     }
 
     .brewImage {
-        background-image: url('https://st2.depositphotos.com/1692343/6719/i/950/depositphotos_67196203-stock-photo-assorted-beers-in-a-flight.jpg');
+        background-image: 'images/beerFlight.jpg';
         height: 255px;
         width: 200px;
         border: 1px solid #1F5AFF;
