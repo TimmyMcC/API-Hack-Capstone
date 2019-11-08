@@ -16,13 +16,13 @@ The user can conduct a search using one required and two optional criteria. They
 ## Screenshots
 
 ### Mobile
-X
-
+<img src="Images/Brews_Clues_Start_Mobile.jpg" alt="Brew's Clues Start View" width="320" height="658">
+<img src="Images/Brews_Clues_Search_Mobile.jpg" alt="Brew's Clues Search View" width="320" height="658">
 
 
 ### Desktop
-X
-
+![Brew's Clues Start View](/Images/Brews_Clues_Start_Desktop.png "Brew's Clues")
+![Brew's Clues Search Results](/Images/Brews_Clues_Search_Desktop.png "Brew's Clues")
 
 
 ## Technologies Used
