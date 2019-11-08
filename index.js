@@ -15,7 +15,7 @@ function queryParamsToString(params) {
   return queryItems.join('&');
 }
 
-function getBreweryInfo(query, brewState, brewType, maxResults=10) {
+function getBreweryInfo(query, brewState, brewType, maxResults) {
 
   const params = {
     by_city: query,
