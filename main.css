@@ -7,6 +7,10 @@
 html {
     height: 100%;
 }
+
+body {
+    overflow-y: scroll;
+}
   
 .header {
     font-family: 'Bree Serif', serif;
