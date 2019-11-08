@@ -341,7 +341,7 @@ p {
     }
 }
 
-@media screen and (min-width: 1230px) {
+@media screen and (min-width: 1260px) {
 
     .brewImage {
         background-image: url(Images/beerFlight.jpg);
