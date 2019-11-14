@@ -36,7 +36,7 @@ function getBreweryInfo(query, brewState, brewType, maxResults) {
     .then(responseJson => {
       // If the search brings back no results (an empty array), user is alerted
       if (responseJson.length === 0){
-        alert('Search yielded zero results. Try searching with different criteria.');
+        alert('Search yielded zero results. Try searching again with different criteria.');
       }
       // If the search brings back fewer results than requested, user is alerted as to how many, then the results are displayed
       else if (responseJson.length < $('#js-max-results').val()) {
