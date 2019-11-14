@@ -36,7 +36,7 @@ function getBreweryInfo(query, brewState, brewType, maxResults) {
     .then(responseJson => {
       // If the search brings back no results (an empty array), user is alerted
       if (responseJson.length === 0){
-        alert('Search yielded zero results. Try searching again with different criteria.');
+        alert('Search yielded zero results. Try searching with different criteria.');
       }
       // Attempting to alert the user that their search was unsuccessful
       // Haven't come across an instance of this happening during testing, so I'm not 100% sure it works
