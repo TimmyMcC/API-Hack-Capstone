@@ -38,12 +38,6 @@ function getBreweryInfo(query, brewState, brewType, maxResults) {
       if (responseJson.length === 0){
         alert('Search yielded zero results. Try searching with different criteria.');
       }
-      // Attempting to alert the user that their search was unsuccessful
-      // Haven't come across an instance of this happening during testing, so I'm not 100% sure it works
-      else if (response.statusText === 'Failed to fetch') {
-        $('#js-error-message').empty();
-        alert('Search was unsuccessful. Please try again.');
-      }
       // If the search brings back fewer results than requested, user is alerted as to how many, then the results are displayed
       else if (responseJson.length < $('#js-max-results').val()) {
         alert(`Search yielded fewer results than were requested. Only ${responseJson.length} breweries were found.`);
