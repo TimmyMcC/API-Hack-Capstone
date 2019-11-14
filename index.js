@@ -79,7 +79,7 @@ function formatResults(responseJson) {
       <p>${responseJson[i].city}, ${responseJson[i].state} ${zip}</p>
       <p>Call: <a href="tel:${formattedPhone}" class="phone">${formattedPhone}</a></p>
       <div id="map" class="mapBox">
-          <a href="https://www.google.com/maps/place/${address}" target="_blank"><img class="mapImage" src="https://maps.googleapis.com/maps/api/staticmap?center=${address}&zoom=15&size=400x400&maptype=roadmap&markers=size:mid%7Ccolor:red%7C${address}&key=AIzaSyDj9_prueHs6rCxIYROe8FFn97GeGnlcSg"></a>
+          <a href="https://www.google.com/maps/place/${address}" target="_blank"><img class="mapImage" src="https://maps.googleapis.com/maps/api/staticmap?center=${address}&zoom=15&size=400x400&maptype=roadmap&markers=size:mid%7Ccolor:red%7C${address}&key=AIzaSyB_a4rSlj88UiorrYUkhQ-lzHjHPNCmlNY"></a>
       </div>
     </li>`
   );
