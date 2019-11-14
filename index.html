@@ -12,11 +12,11 @@
 
 <body>
 
-    <a name="top"></a>
+    <a id="top"></a>
 
     <section class="headerFormBox">
 
-        <div class="brewImage"></div>
+        <img class="brewImage" src="Images/beerFlight.jpg" alt="a flight of four beers">
 
         <section class="h1h3Box">
             
@@ -30,65 +30,65 @@
 
 		<section id="js-form-container" class="formContainer">
 
-            <fieldset name="search-for-breweries"></fieldset>
-    	        <form id="js-brewery-search" class="brewerySearch">
-                    <label for="search-city">City</label>
-                    <input type="text" id="js-brewery-city" name="citySearch" class="citySearch" placeholder="Optional">
-                    <label for="search-state">State</label>
+            <fieldset id="search-for-breweries">
+                <form id="js-brewery-search" class="brewerySearch">
+                    <label for="js-brewery-city">City</label>
+                    <input type="text" id="js-brewery-city" class="citySearch" placeholder="Optional">
+                    <label for="js-brewery-state">State</label>
                     <select id="js-brewery-state" required>
                         <option value="" disabled selected>Required</option>
-			<option value="alabama">Alabama</option>
+                        <option value="alabama">Alabama</option>
                         <option value="alaska">Alaska</option>                        
                         <option value="arizona">Arizona</option>
                         <option value="arkansas">Arkansas</option>
-			<option value="california">California</option>
+                        <option value="california">California</option>
                         <option value="colorado">Colorado</option>
-			<option value="connecticut">Connecticut</option>
-			<option value="delaware">Delaware</option>
+                        <option value="connecticut">Connecticut</option>
+                        <option value="delaware">Delaware</option>
                         <option value="florida">Florida</option>
                         <option value="georgia">Georgia</option>
-			<option value="hawaii">Hawaii</option>
-			<option value="idaho">Idaho</option>
-			<option value="illinois">Illinois</option>
-			<option value="indiana">Indiana</option>
-			<option value="iowa">Iowa</option>
+                        <option value="hawaii">Hawaii</option>
+                        <option value="idaho">Idaho</option>
+                        <option value="illinois">Illinois</option>
+                        <option value="indiana">Indiana</option>
+                        <option value="iowa">Iowa</option>
                         <option value="kansas">Kansas</option>
-			<option value="kentucky">Kentucky</option>
-			<option value="louisiana">Louisiana</option>
-			<option value="maine">Maine</option>
-			<option value="maryland">Maryland</option>
-			<option value="massachusetts">Massachusetts</option>
-			<option value="michigan">Michigan</option>
+                        <option value="kentucky">Kentucky</option>
+                        <option value="louisiana">Louisiana</option>
+                        <option value="maine">Maine</option>
+                        <option value="maryland">Maryland</option>
+                        <option value="massachusetts">Massachusetts</option>
+                        <option value="michigan">Michigan</option>
                         <option value="minnesota">Minnesota</option>
                         <option value="mississippi">Mississippi</option>
-			<option value="missouri">Missouri</option>
-			<option value="montana">Montana</option>
-			<option value="nebraska">Nebraska</option>
-			<option value="nevada">Nevada</option>
-			<option value="new_hampshire">New Hampshire</option>
+                        <option value="missouri">Missouri</option>
+                        <option value="montana">Montana</option>
+                        <option value="nebraska">Nebraska</option>
+                        <option value="nevada">Nevada</option>
+                        <option value="new_hampshire">New Hampshire</option>
                         <option value="new_jersey">New Jersey</option>
                         <option value="new_mexico">New Mexico</option>
-			<option value="new_york">New York</option>
-			<option value="north_carolina">North Carolina</option>
-			<option value="north_dakota">North Dakota</option>
-			<option value="ohio">Ohio</option>
+                        <option value="new_york">New York</option>
+                        <option value="north_carolina">North Carolina</option>
+                        <option value="north_dakota">North Dakota</option>
+                        <option value="ohio">Ohio</option>
                         <option value="oklahoma">Oklahoma</option>
                         <option value="oregon">Oregon</option>
                         <option value="pennsylvania">Pennsylvania</option>
-			<option value="rhode_island">Rhode Island</option>
-			<option value="south_carolina">South Carolina</option>
-			<option value="south_dakota">South Dakota</option>
+                        <option value="rhode_island">Rhode Island</option>
+                        <option value="south_carolina">South Carolina</option>
+                        <option value="south_dakota">South Dakota</option>
                         <option value="tennessee">Tennessee</option>
                         <option value="texas">Texas</option>
-			<option value="utah">Utah</option>
-			<option value="vermont">Vermont</option>
-			<option value="virginia">Virginia</option>
-			<option value="washington">Washington</option>
-			<option value="west_virginia">West Virginia</option>
-			<option value="wisconsin">Wisconsin</option>
-			<option value="wyoming">Wyoming</option>
+                        <option value="utah">Utah</option>
+                        <option value="vermont">Vermont</option>
+                        <option value="virginia">Virginia</option>
+                        <option value="washington">Washington</option>
+                        <option value="west_virginia">West Virginia</option>
+                        <option value="wisconsin">Wisconsin</option>
+                        <option value="wyoming">Wyoming</option>
                     </select>
-                    <label for="search-type">Brewery Type</label>
+                    <label for="js-brewery-type">Brewery Type</label>
                     <select id="js-brewery-type">
                         <option value="" selected>All</option>
                         <option value="micro">Micro</option>
@@ -100,10 +100,10 @@
                         <option value="contract">Contract</option>
                         <option value="proprietor">Proprietor</option>
                     </select>
-                    <label for="number-of-results">Results to Return</label>
-                    <input type="number" name="max-results" class="maxResults" id="js-max-results" value="10" min="1" max="50">
+                    <label for="js-max-results">Results to Return</label>
+                    <input type="number" class="maxResults" id="js-max-results" value="10" min="1" max="50">
                     <input id="js-submit" type="submit" value="Beer me!" class="submitForm formButton">
-                    <input id="js-clear-form" type="button" value="Clear Form" class="clearForm formButton hidden">
+                    <input id="js-restart-search" type="button" value="Restart Search" class="restartSearch formButton hidden">
                 </form>
             </fieldset>
 
@@ -111,7 +111,7 @@
 
     </section>
 
-    <section class="resultsContainer">
+    <main class="resultsContainer">
 
         <p id="js-error-message" class="errorMessage"></p>
 
@@ -125,7 +125,7 @@
 
         </section>
 
-    </section>
+    </main>
 
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 
