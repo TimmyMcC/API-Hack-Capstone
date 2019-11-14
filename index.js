@@ -25,9 +25,7 @@ function getBreweryInfo(query, brewState, brewType, maxResults) {
   }
   const queryString = queryParamsToString(params)
   const url = baseURL + '?' + queryString;
-
-  console.log(url);
-
+  
   fetch(url)
     .then(response => {
       if (response.ok) {
@@ -35,19 +33,24 @@ function getBreweryInfo(query, brewState, brewType, maxResults) {
       }
       throw new Error(response.statusText);
     })
-    .then(responseJson => displayResults(responseJson))
+    .then(responseJson => {
+      // If the search brings back no results (an empty array), user is alerted
+      if (responseJson.length === 0){
+        alert('Search yielded zero results. Try searching with different criteria.');
+      }
+      // If the search brings back fewer results than requested, user is alerted as to how many, then the results are displayed
+      else if (responseJson.length < $('#js-max-results').val()) {
+        alert(`Search yielded fewer results than were requested. Only ${responseJson.length} breweries were found.`);
+        displayResults(responseJson);
+      }
+      else {displayResults(responseJson);}
+    })
     .catch(err => {
       $('#js-error-message').text(`Something went wrong: ${err.message}`);
     });
 }
 
-function displayResults(responseJson) {
-  
-  console.log(responseJson);
-  $('#js-brew-info-list').empty();
-  $('#js-error-message').empty();
-  $('#js-clear-form').removeClass('hidden');
-
+function formatResults(responseJson) {
   for (let i = 0; i < responseJson.length; i++){
     // Capitalizes first letter of brewery type
     let type = responseJson[i].brewery_type.charAt(0).toUpperCase() + responseJson[i].brewery_type.slice(1);
@@ -60,30 +63,37 @@ function displayResults(responseJson) {
     let zip = responseJson[i].postal_code.substr(0, 5);
     // Changes phone number into a normal format
     let phone = responseJson[i].phone;
-    let formattedPhone = phone.substr(0, 3) + '-' + phone.substr(3, 3) + '-' + phone.substr(6,4);
+    let formattedPhone = '(' + phone.substr(0, 3) + ') ' + phone.substr(3, 3) + '-' + phone.substr(6,4);
+    // Adds formatted results to the HTML 
     $('#js-brew-info-list').append(
-        `<li class="brewBox">
-        <h3 class="siteName"><a href="${responseJson[i].website_url}" target="_blank">${responseJson[i].name}</a></h3>
-        <p>Brewery Type: ${type}</p>
-        <p>${responseJson[i].street}</p>
-        <p>${responseJson[i].city}, ${responseJson[i].state} ${zip}</p>
-        <p>Call: <a href="tel:${formattedPhone}" class="phone">${formattedPhone}</a></p>
-        <div id="map" class="mapBox">
-            <a href="https://www.google.com/maps/place/${address}" target="_blank"><img class="mapImage" src="https://maps.googleapis.com/maps/api/staticmap?center=${address}&zoom=15&size=400x400&maptype=roadmap&markers=size:mid%7Ccolor:red%7C${address}&key=AIzaSyAYGHKk4ShuVV2kSW1qdriV73JdxAaxCzg"></a>
-        </div>
-      </li>`
-    );
+      `<li class="brewBox">
+      <h3 class="siteName"><a href="${responseJson[i].website_url}" target="_blank">${responseJson[i].name}</a></h3>
+      <p>Brewery Type: ${type}</p>
+      <p>${responseJson[i].street}</p>
+      <p>${responseJson[i].city}, ${responseJson[i].state} ${zip}</p>
+      <p>Call: <a href="tel:${formattedPhone}" class="phone">${formattedPhone}</a></p>
+      <div id="map" class="mapBox">
+          <a href="https://www.google.com/maps/place/${address}" target="_blank"><img class="mapImage" src="https://maps.googleapis.com/maps/api/staticmap?center=${address}&zoom=15&size=400x400&maptype=roadmap&markers=size:mid%7Ccolor:red%7C${address}&key=AIzaSyAYGHKk4ShuVV2kSW1qdriV73JdxAaxCzg"></a>
+      </div>
+    </li>`
+  );
   };
-  
+}
+
+function displayResults(responseJson) {
+  $('#js-brew-info-list').empty();
+  $('#js-error-message').empty();
+  $('#js-restart-search').removeClass('hidden');
+  formatResults(responseJson);
   $('#js-brew-info-box').removeClass('hidden');
 }
 
-function clearForm() {
-  $('#js-clear-form').on('click', function() {
+function restartSearch() {
+  $('#js-restart-search').on('click', function() {
     event.preventDefault();
     document.getElementById("js-brewery-search").reset();
     $('#js-brew-info-box').addClass('hidden');
-    $('#js-clear-form').addClass('hidden');
+    $('#js-restart-search').addClass('hidden');
   })
 }
 
@@ -95,7 +105,7 @@ function watchForm() {
     const brewType = $('#js-brewery-type').val();
     const maxResults = $('#js-max-results').val();
     getBreweryInfo(brewCity, brewState, brewType, maxResults);
-    clearForm();
+    restartSearch();
   })
 }
 
