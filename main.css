@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    background-image: url('https://www.thespruceeats.com/thmb/yvvxdsQW2P3qnUhLDw9IQ2ZIGgc=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/beer-head-58a6ca713df78c345b430786.jpg');
+    background-image: url(Images/beerBackground.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
