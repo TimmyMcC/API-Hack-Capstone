@@ -9,10 +9,11 @@ html {
 }
 
 body {
-    background-image: url(Images/beerBackground.jpg);
+    background-image: url('https://www.thespruceeats.com/thmb/yvvxdsQW2P3qnUhLDw9IQ2ZIGgc=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/beer-head-58a6ca713df78c345b430786.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    height: 100%;
     overflow-y: scroll;
 }
   
@@ -29,7 +30,7 @@ h3 {
   
 .appDescription, .brewerySearch, .brewStuffs, .toTop {
     font-family: 'Hind Vadodara', sans-serif;
-  }
+}
 
 .hidden {
     display: none;
@@ -41,7 +42,7 @@ a:link {
 }
 
 a:visited {
-    color: #D60103;
+    color: #254BB3;
     text-decoration: none;
 }
 
@@ -51,7 +52,7 @@ a:hover, a:focus {
 }
 
 a:active {
-    color: #EDA800;
+    color: #D60103;
 }
 
 fieldset {
@@ -61,17 +62,11 @@ fieldset {
 }
   
 select {
-    height: 25px;
     background-color: white;
-    font-size: 14px;
-}
-
-input {
-    font-size: 14px;
 }
   
 .formButton {
-    margin-top: 20px;
+    margin-top: 30px;
     background-color: white;
     cursor: pointer;
     font-size: 16px;
@@ -82,13 +77,17 @@ input {
 }
   
 .brewerySearch {
-    width: 180px;
+    width: 210px;
     padding: 20px;
-    margin: 0 auto;
+    margin: 0 auto 30px;
+}
+
+label {
+    font-weight: bold;
 }
   
 input, select {
-    width: 140px;
+    width: 170px;
     padding: 2px;
     margin: 0 auto;
     border-radius: 3px;
@@ -126,18 +125,30 @@ p {
 }
 
 .toTop {
+    font-size: 22px;
     text-align: center;
     margin: 10px auto;
+}
+
+.errorMessage {
+    text-align: center;
+    color: #D60103;
 }
   
 @media screen and (min-width: 320px) {
 
+    .brewImage {
+        visibility: hidden;
+        height: 0px;
+        width: 0px;
+    }
+
     .header {
         width: 100%;
-        height: 58px;
-        font-size: 38px;
+        height: 56px;
+        font-size: 42px;
         text-align: center;
-        margin-top: 20px;
+        margin-top: 18px;
         position: relative;
         left: 50%;
         transform: translateX(-50%);
@@ -148,12 +159,30 @@ p {
     }
 
     .appDescription {
-        width: 250px;
-        font-size: 18px;
-        margin-top: 15px;
+        width: 300px;
+        font-size: 21px;
+        margin-top: 28px;
         position: relative;
         left: 50%;
         transform: translateX(-50%);
+    }
+
+    label {
+        font-size: 20px;
+    }
+
+    input, select {
+        height: 40px;
+        font-size: 16px;
+    }
+
+    a:link {
+        padding: 20px;
+        margin: -20px;
+    }
+
+    .brewerySearch {
+        margin-top: 10px;
     }
 
     .brewBox {
@@ -162,26 +191,21 @@ p {
     }
 
     p {
-        font-size: 14px;
+        font-size: 16px;
     }
   
     .mapImage {
         height: 250px;
         width: 250px;
     }
-
-    .toTop {
-        font-size: 17px;
-    }
 }
 
 @media screen and (min-width: 420px) {
 
-    body {
-        background-image: url(Images/beerBackground.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
+    .brewImage {
+        visibility: hidden;
+        height: 0px;
+        width: 0px;
     }
 
     .header {
@@ -208,36 +232,57 @@ p {
         transform: translateX(-50%);
     }
 
+    label {
+        font-size: 20px;
+    }
+
+    input, select {
+        height: 40px;
+        font-size: 16px;
+    }
+
+    a:link {
+        padding: 20px;
+        margin: -20px;
+    }
+
+    .brewerySearch {
+        margin-top: 10px;
+    } 
+
     .brewBox {
-        width: 280px;
+        width: 340px;
         margin: 0 auto 25px;
     }
 
+    .siteName {
+        font-size: 21px;
+    }
+
     p {
-        font-size: 14px;
+        font-size: 18px;
     }
   
     .mapImage {
-        height: 250px;
-        width: 250px;
-    }
-
-    .toTop {
-        font-size: 17px;
+        height: 310px;
+        width: 310px;
     }
 }
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 720px) {
+
+    .brewImage {
+        visibility: hidden;
+        height: 0px;
+        width: 0px;
+    }
 
     .header {
-        width: 100%;
-        height: 58px;
-        font-size: 52px;
+        width: 250px;
+        height: 66px;
+        font-size: 60px;
         text-align: center;
-        margin-top: 20px;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
+        margin-top: 45px;
     }
 
     h3 {
@@ -245,13 +290,37 @@ p {
     }
 
     .appDescription {
-        width: 325px;
+        width: 200px;
         font-size: 24px;
-        margin-top: 35px;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-    }   
+        text-align: center;
+        margin-top: 140px;
+    }
+
+    label {
+        font-size: 22px;
+    }
+    
+    input, select {
+        height: 44px;
+        font-size: 18px;
+    }
+
+    a:link {
+        padding: 20px;
+        margin: -20px;
+    }
+
+    .headerFormBox {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 0 20px;
+    }
+
+    .brewerySearch {
+        margin-top: 25px;
+        margin-right: 40px;
+    } 
 
     .brewStuffs {
         display: flex;
@@ -270,24 +339,26 @@ p {
     }
 
     p {
-        font-size: 17px;
+        font-size: 18px;
     }
   
     .mapImage {
         height: 310px;
         width: 310px;
     }
-
-    .toTop {
-        font-size: 20px;
-    }
 }
 
 @media screen and (min-width: 870px) {
 
+    .brewImage {
+        visibility: hidden;
+        height: 0px;
+        width: 0px;
+    }
+
     .header {
         height: 66px;
-        width: 500px;
+        width: 450px;
         font-size: 60px;
         text-align: center;
         margin-top: 66px;
@@ -298,6 +369,20 @@ p {
         font-size: 30px;
         text-align: center;
         margin-top: 40px;
+    }
+
+    label {
+        font-size: 22px;
+    }
+
+    input, select {
+        height: 44px;
+        font-size: 18px;
+    }
+
+    a:link {
+        padding: 20px;
+        margin: -20px;
     }
 
     .headerFormBox {
@@ -335,16 +420,12 @@ p {
         height: 370px;
         width: 370px;
     }
-
-    .toTop {
-        font-size: 22px;
-    }
 }
 
 @media screen and (min-width: 1260px) {
 
     .brewImage {
-        background-image: url(Images/beerFlight.jpg);
+        visibility: visible;
         height: 255px;
         width: 200px;
         border: 1px solid #1F5AFF;
@@ -356,7 +437,7 @@ p {
 
     .header {
         height: 66px;
-        width: 500px;
+        width: 450px;
         font-size: 60px;
         text-align: center;
         margin-top: 66px;
@@ -367,6 +448,15 @@ p {
         font-size: 30px;
         text-align: center;
         margin-top: 40px;
+    }
+
+    label {
+        font-size: 22px;
+    }
+
+    input, select {
+        height: 34px;
+        font-size: 16px;
     }
 
     .headerFormBox {
@@ -403,9 +493,5 @@ p {
     .mapImage {
         height: 370px;
         width: 370px;
-    }
-
-    .toTop {
-        font-size: 22px;
     }
 }
